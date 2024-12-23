@@ -80,6 +80,7 @@ ATARI_ENVS = [
     AtariSpec("atari_wizardofwor", "WizardOfWorNoFrameskip-v4"),
     AtariSpec("atari_yarsrevenge", "YarsRevengeNoFrameskip-v4"),
     AtariSpec("atari_zaxxon", "ZaxxonNoFrameskip-v4"),
+    AtariSpec("mario", "SuperMarioBros-v0"),
 ]
 
 
