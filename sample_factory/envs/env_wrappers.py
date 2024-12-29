@@ -406,7 +406,7 @@ class NESEpisodicLifeEnv(gym.Wrapper):
             # no-op step to advance from terminal/lost life state
             obs, _, terminated, truncated, info = self.env.step(0)
         print("info: "+str(info))
-        self.lives = info.life
+        self.lives = info["life"]
         print("lives are "+self.lives)
         return obs, info
 
