@@ -4,7 +4,7 @@ import gymnasium as gym
 
 from sample_factory.envs.env_wrappers import (
     ClipRewardEnv,
-    EpisodicLifeEnv,
+    NESEpisodicLifeEnv,
     FireResetEnv,
     MaxAndSkipEnv,
     NoopResetEnv,
@@ -47,7 +47,7 @@ def make_nes_env(env_name, cfg, env_config, render_mode: Optional[str] = None):
     env = gym.wrappers.RecordEpisodeStatistics(env)
     env = NoopResetEnv(env, noop_max=30)
     env = MaxAndSkipEnv(env, skip=cfg.env_frameskip)
-    env = EpisodicLifeEnv(env)
+    env = NESEpisodicLifeEnv(env)
     # noinspection PyUnresolvedReferences
     if "FIRE" in env.unwrapped.get_action_meanings():
         env = FireResetEnv(env)
