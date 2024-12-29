@@ -94,7 +94,7 @@ def atari_env_by_name(name):
 
 def make_atari_env(env_name, cfg, env_config, render_mode: Optional[str] = None):
     atari_spec = atari_env_by_name(env_name)
-
+    print("Making " + atari_spec.env_id + "from" + env_name)
     env = gym.make(atari_spec.env_id, render_mode=render_mode)
 
     if atari_spec.default_timeout is not None:
