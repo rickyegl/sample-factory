@@ -382,7 +382,7 @@ class NESEpisodicLifeEnv(gym.Wrapper):
         self.was_real_done = terminated | truncated
         # check current lives, make loss of life terminal,
         # then update lives to handle bonus lives
-        lives = self.env._life
+        lives = info.life
         print("lives are "+lives)
         if 0 < lives < self.lives:
             # for Qbert sometimes we stay in lives == 0 condtion for a few frames
@@ -405,7 +405,7 @@ class NESEpisodicLifeEnv(gym.Wrapper):
         else:
             # no-op step to advance from terminal/lost life state
             obs, _, terminated, truncated, info = self.env.step(0)
-        self.lives = self.env._life
+        self.lives = info.life
         print("lives are "+self.lives)
         return obs, info
 
