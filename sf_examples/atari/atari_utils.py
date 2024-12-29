@@ -59,7 +59,7 @@ ATARI_ENVS = [
     AtariSpec("atari_namethisgame", "NameThisGameNoFrameskip-v4"),
     AtariSpec("atari_phoenix", "PhoenixNoFrameskip-v4"),
     AtariSpec("atari_pitfall", "PitfallNoFrameskip-v4"),
-    AtariSpec("atari_pong", "PongNoFrameskip-v4"),
+    AtariSpec("atari_pong", "ALE/PongNoFrameskip-v5"),
     AtariSpec("atari_privateye", "PrivateEyeNoFrameskip-v4"),
     AtariSpec("atari_qbert", "QbertNoFrameskip-v4"),
     AtariSpec("atari_riverraid", "RiverraidNoFrameskip-v4"),
