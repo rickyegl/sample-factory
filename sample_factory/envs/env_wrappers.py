@@ -365,7 +365,7 @@ class EpisodicLifeEnv(gym.Wrapper):
         self.lives = self.env.unwrapped.ale.lives()
         return obs, info
     
-class EpisodicLifeEnv(gym.Wrapper):
+class NESEpisodicLifeEnv(gym.Wrapper):
     """
     Make end-of-life == end-of-episode, but only reset on true game over.
     Done by DeepMind for the DQN and co. since it helps value estimation.
