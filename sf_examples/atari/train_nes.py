@@ -4,12 +4,12 @@ from sample_factory.cfg.arguments import parse_full_cfg, parse_sf_args
 from sample_factory.envs.env_utils import register_env
 from sample_factory.train import run_rl
 from sf_examples.atari.atari_params import atari_override_defaults
-from sf_examples.atari.atari_utils import ATARI_ENVS, make_atari_env
+from sf_examples.nes.nes_utils import ATARI_ENVS, make_nes_env
 
 
 def register_atari_envs():
     for env in ATARI_ENVS:
-        register_env(env.name, make_atari_env)
+        register_env(env.name, make_nes_env)
 
 
 def register_atari_components():
