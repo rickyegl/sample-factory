@@ -386,7 +386,7 @@ class NESEpisodicLifeEnv(gym.Wrapper):
         lives = info["life"]
         if(self.lastStage != info["stage"]):
             self.lastStage = info["stage"]
-            print("Starting stage " + self.lastStage)
+            print("Starting stage " + str(self.lastStage))
         #print("lives are "+str(self.lives))
         if 0 < lives < self.lives:
             # for Qbert sometimes we stay in lives == 0 condtion for a few frames
