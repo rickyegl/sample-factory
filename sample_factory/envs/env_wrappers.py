@@ -376,8 +376,7 @@ class NESEpisodicLifeEnv(gym.Wrapper):
         gym.Wrapper.__init__(self, env)
         self.lives = 0
         self.was_real_done = True
-        
-    lastStage = None
+        self.lastStage = None
 
     def step(self, action: int) -> GymStepReturn:
         obs, reward, terminated, truncated, info = self.env.step(action)
@@ -385,9 +384,9 @@ class NESEpisodicLifeEnv(gym.Wrapper):
         # check current lives, make loss of life terminal,
         # then update lives to handle bonus lives
         lives = info["life"]
-        if(lastStage != info["stage"]):
-            lastStage = info["stage"]
-            print("Starting stage " + lastStage)
+        if(self.lastStage != info["stage"]):
+            self.lastStage = info["stage"]
+            print("Starting stage " + self.lastStage)
         #print("lives are "+str(self.lives))
         if 0 < lives < self.lives:
             # for Qbert sometimes we stay in lives == 0 condtion for a few frames
