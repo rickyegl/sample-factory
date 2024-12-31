@@ -25,6 +25,7 @@ class NESSpec:
 
 NES_ENVS = [
     NESSpec("mario", "gym_super_mario_bros:SuperMarioBros-v0"),
+    NESSpec("marioR", "gym_super_mario_bros:SuperMarioBros-v0"),
 ]
 
 

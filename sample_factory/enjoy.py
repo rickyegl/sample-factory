@@ -97,6 +97,7 @@ def load_state_dict(cfg: Config, actor_critic: ActorCritic, device: torch.device
     if checkpoint_dict:
         actor_critic.load_state_dict(checkpoint_dict["model"])
     else:
+        print(Learner.checkpoint_dir(cfg, policy_id))
         raise RuntimeError("Could not load checkpoint")
 
 

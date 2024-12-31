@@ -1,7 +1,7 @@
 import sys
 
 from sample_factory.enjoy import enjoy
-from sf_examples.atari.train_atari import parse_atari_args, register_atari_components
+from sf_examples.nes.train_nes import parse_atari_args, register_atari_components
 
 
 def main():
